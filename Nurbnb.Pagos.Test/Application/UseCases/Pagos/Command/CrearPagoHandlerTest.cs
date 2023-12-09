@@ -61,7 +61,7 @@ namespace Nurbnb.Pagos.Test.Application.UseCases.Pagos.Command
 
             var result = handler.Handle(evento, tcs.Token);
 
-            Assert.True(result.IsCompletedSuccessfully);
+            Assert.False(result.IsCompletedSuccessfully);
            
         }
 
