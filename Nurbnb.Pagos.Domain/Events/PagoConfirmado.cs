@@ -11,6 +11,7 @@ namespace Nurbnb.Pagos.Domain.Events
     public record PagoConfirmado : DomainEvent,INotification
     {
         public Guid PagoId { get; init; }
+
         public DetallePagoConfirmado Detalle { get; init; }
         public PagoConfirmado(Guid pagoId,
             DetallePagoConfirmado detalle) : base(DateTime.Now)
