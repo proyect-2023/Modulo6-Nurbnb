@@ -1,0 +1,22 @@
+{
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0"
+  },
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "name": "nurbnb-pagos",
+  "description": "Proyecto de Nurbnb Microservicio Pagos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [
+    "Nur2023."
+  ],
+  "author": "mcm",
+  "license": "ISC",
+  "lint-staged": {
+    "*.cs": "dotnet-format --include"
+  }
+
+}
