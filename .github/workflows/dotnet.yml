@@ -51,6 +51,7 @@ jobs:
           
     - name: Install dotnet code coverage tool
       run: dotnet tool install --global dotnet-coverage
+
       
     - name: Build and analyze
       env:
