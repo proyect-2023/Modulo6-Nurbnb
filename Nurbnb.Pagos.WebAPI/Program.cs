@@ -2,6 +2,7 @@ using Nurbnb.Pagos.Infrastructure;
 using System.Runtime.InteropServices;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.WebHost.UseSentry();
 var MyAllowSpecificOrigins = "MyAllowSpecificOrigins";
 // Add services to the container.
 builder.Services.AddCors(options =>
@@ -31,7 +32,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-//app.UseHttpsRedirection();
+
 app.UseCors(MyAllowSpecificOrigins);
 
 app.UseAuthorization();
