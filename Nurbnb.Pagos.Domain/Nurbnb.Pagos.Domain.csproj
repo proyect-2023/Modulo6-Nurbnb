@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="MediatR" Version="12.2.0" />
+    <PackageReference Include="Sentry.AspNetCore" Version="3.41.3" />
   </ItemGroup>
 
   <ItemGroup>

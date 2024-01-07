@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Nurbnb.Pagos.Application.UseCases.CatalogoDevoluciones.Query.GetCatalogoDevolucionList;
 using Nurbnb.Pagos.Application.UseCases.Catalogos.Command.CrearCatalogo;
 using Nurbnb.Pagos.Application.UseCases.Catalogos.Query.GetCatalogoList;
+using Sentry;
 
 namespace Nurbnb.Pagos.WebAPI.Controllers
 {
@@ -23,7 +24,7 @@ namespace Nurbnb.Pagos.WebAPI.Controllers
         public async Task<IActionResult> CrearCatalogo([FromBody] CrearCatalogoCommand command)
         {
             var catalogoId = await _mediator.Send(command);
-
+            SentrySdk.CaptureMessage("Sentry:Catalogo creado exitosamente");
             return Ok(catalogoId);
         }
         [HttpGet]
