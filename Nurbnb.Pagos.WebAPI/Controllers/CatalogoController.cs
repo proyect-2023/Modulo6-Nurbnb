@@ -19,6 +19,7 @@ namespace Nurbnb.Pagos.WebAPI.Controllers
         }
 
         [HttpPost]
+        [Route("CrearCatalogo")]
         public async Task<IActionResult> CrearCatalogo([FromBody] CrearCatalogoCommand command)
         {
             var catalogoId = await _mediator.Send(command);
